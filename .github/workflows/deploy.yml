@@ -17,3 +17,4 @@ jobs:
         environment: staging
         steps:
             - run: echo "🔎 The secret for staging is ${{ secrets.TestSecret }}"
+ 
