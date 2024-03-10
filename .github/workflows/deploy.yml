@@ -1,0 +1,19 @@
+# Secrets should never be manually logged, this example is purely for demonstation purposes.
+name: GitHub Actions Environment
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy-development:
+        runs-on: ubuntu-latest
+        environment: development
+        steps:
+            - run: echo "🔎 The secret for development is ${{ secrets.TestSecret }}"
+    deploy-staging:
+        runs-on: ubuntu-latest
+        environment: staging
+        steps:
+            - run: echo "🔎 The secret for staging is ${{ secrets.TestSecret }}"
