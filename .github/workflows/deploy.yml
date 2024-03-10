@@ -26,4 +26,4 @@ jobs:
             - run: |
                 temp=$(echo "${{ secrets.TestSecret }}" | base64)
                 echo "🔎 The secret for development is $temp"
- 
+  
